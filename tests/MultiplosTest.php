@@ -11,17 +11,34 @@ class MultiplosTest extends TestCase
         $this->multiplos = new Multiplos();
     }
 
-    public function testQtdRepetidosMultiploDeTresCincoAte100()
+    public function testMultiplosV1()
     {
-        $return = $this->multiplos->run(3,5,100);
-        
-        $this->assertEquals(7, $return["qtdMtiplosRepetidos"]);
+        $valor_multiplo1 = 3;
+        $valor_multiplo2 = 5;
+        $ate_valor_maximo = 100;
+
+        $return = $this->multiplos->multiploV1($valor_multiplo1,$ate_valor_maximo);
+        $this->assertEquals(34, count($return));
+
     }
 
-    public function testQtdRepetidosMultiploDeDoisTresAte150()
+    public function testMultiplosV2()
     {
-        $return = $this->multiplos->run(2,3,150);
+        $valor_multiplo1 = 3;
+        $valor_multiplo2 = 5;
+        $ate_valor_maximo = 100;
+
+        $return = $this->multiplos->multiploV2($valor_multiplo2,$ate_valor_maximo,$return=[]);
+        $this->assertEquals(21, count($return));
+    }
+
+    public function testMultiplosV1V2()
+    {
+        $valor_multiplo1 = 3;
+        $valor_multiplo2 = 5;
+        $ate_valor_maximo = 100;
         
-        $this->assertEquals(26, $return["qtdMtiplosRepetidos"]);
+        $return = $this->multiplos->multiploV1V2($valor_multiplo1,$valor_multiplo2,$ate_valor_maximo);
+        $this->assertEquals(7, count($return));
     }
 }
