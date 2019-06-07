@@ -1,0 +1,20 @@
+{
+    "name": "felipefariasdev/bhut",
+    "description": "Usando os princípios do SOLID, escreva um programa que print todos os números de 1 até 100. Porém, quando for múltiplos de 3, print 'BHUT', se for múltiplo de 5 print 'IT' e se for multiplo de 3 e 5, print 'BHUT IT' - packaglist com phpunit {PSR-4}",
+    "type": "packaglist-bhut",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Felipe Farias",
+            "email": "felipe.rodrigues.dev@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^6"
+    },
+    "autoload": {
+        "psr-4": {
+            "bhut\\": "app/"
+        }
+    }
+}
