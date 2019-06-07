@@ -20,4 +20,3 @@ echo "Resultado: \n \n";
 echo "Qtd de multiplos de {$valor_multiplo}: " . count($return) ."\n \n";
 
 print_r($return);
-
